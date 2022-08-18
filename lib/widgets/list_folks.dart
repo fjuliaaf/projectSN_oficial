@@ -16,29 +16,61 @@ class ListFolks extends StatefulWidget {
 class _ListFolksState extends State<ListFolks> {
   Widget build(BuildContext context){
     return Column(
-        children: [
-          Text(
-            widget.people.name,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-                color: Colors.black,
-                fontFamily: 'Abel-Regular'
-            ),
+      children: [
+        const SizedBox(height: 18),
+        Row(
+          children: [
+            networkImage(),
+            SizedBox(width: 30),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.people.name,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    color: Colors.black,
+                      fontFamily: 'Abel-Regular'
+                    ),
+                ),
+                Text(
+                  widget.people.email,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                    color: Colors.black,
+                    fontFamily: 'Abel-Regular'
+                  ),
+                ),
+                ]
+              ),
+            ]
           ),
-          const SizedBox(height: 16),
-          Text(
-            widget.people.email,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 24,
-                color: Colors.black,
-                fontFamily: 'Abel-Regular'
-            ),
+          const SizedBox(height: 18),
+          Divider(
+            color: Colors.black,
           ),
-          const SizedBox(height: 16),
-          Image.network(widget.people.image),
         ],
-      );
+    );
+  }
+  networkImage() {
+    return Stack(
+      children: [
+        SizedBox(
+          height: 90,
+          width: 90,
+          child: ClipRRect(
+            borderRadius: const BorderRadius.vertical(
+              top: Radius.circular(8),
+            ),
+            child: Image.network(
+              widget.people.image,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

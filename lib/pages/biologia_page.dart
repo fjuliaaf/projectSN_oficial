@@ -85,14 +85,14 @@ class _BiologiaPageState extends State<BiologiaPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color(0xFFA7AED3),
-          centerTitle: false,
-          title: const Text(
-            'Biologia',
-            style: TextStyle(fontSize: 24,color: Colors.white,  fontFamily: 'Staatliches'),
-          ),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFFA7AED3),
+        centerTitle: false,
+        title: const Text(
+          'Biologia',
+          style: TextStyle(fontSize: 24,color: Colors.white,  fontFamily: 'Staatliches'),
         ),
+      ),
         backgroundColor: Color(0xFF9DCC9B),
         body: Container(
           child: ListaConteudo(
@@ -102,6 +102,6 @@ class _BiologiaPageState extends State<BiologiaPage> {
             conteudo10: conteudoB10,
           ),
         ),
-    );
+      );
   }
 }

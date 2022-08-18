@@ -78,16 +78,4 @@ class HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  // void pageFisica() {
-  //   Navigator.push(
-  //     context,
-  //     MaterialPageRoute(
-  //       builder: (context) {
-  //         return FisicaPage();
-  //       },
-  //     ),
-  //   );
-  // }
-
 }

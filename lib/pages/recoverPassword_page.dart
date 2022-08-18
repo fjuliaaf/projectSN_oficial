@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:teste/pages/cadastrar_page.dart';
-import 'package:teste/pages/entrar_page.dart';
+import 'package:teste/pages/register_page.dart';
+import 'package:teste/pages/enter_page.dart';
 
-class RecuperarSenhaPage extends StatefulWidget {
-  const RecuperarSenhaPage({Key? key}) : super(key: key);
+class RecoverPasswordPage extends StatefulWidget {
+  const RecoverPasswordPage({Key? key}) : super(key: key);
 
   @override
-  State<RecuperarSenhaPage> createState() => _RecuperarSenhaPageState();
+  State<RecoverPasswordPage> createState() => _RecoverPasswordPageState();
 }
 
-class _RecuperarSenhaPageState extends State<RecuperarSenhaPage> {
+class _RecoverPasswordPageState extends State<RecoverPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        backgroundColor: const Color(0xFFA7AED3),
+        backgroundColor: Color.fromARGB(255, 45, 16, 51),
         title: const Text(
           'Science Notes',
           style: TextStyle(fontSize: 24, color: Colors.white, fontFamily: 'Staatliches'),
         ),
       ),
+      backgroundColor: Color.fromARGB(255, 216, 194, 221),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -31,28 +32,34 @@ class _RecuperarSenhaPageState extends State<RecuperarSenhaPage> {
                   'Esqueceu a senha?',
                   style: TextStyle(
                     fontSize: 30,
-                    color: Color(0xFFA7AED3),
+                    color: Color.fromARGB(255, 45, 16, 51),
                   ),
                 ),
                 SizedBox(height: 32),
                 Text(
                   'Para recuperar seu acesso, preencha\n' 'o campo com o e-mail cadastrado\n' 'em sua conta e a sua nova senha.',
-                  style: TextStyle(color: Colors.black38,
+                  style: TextStyle(color: Colors.black54,
                   fontSize: 20),
                 ),
                 SizedBox(height: 42),
                 TextFormField(
                   decoration: const InputDecoration(
-                      icon: Icon(Icons.email),
-                      labelText: 'E-mail',
+                    icon: Icon(Icons.email),
+                    labelText: 'E-mail',
+                    labelStyle: TextStyle(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
                 SizedBox(height: 20),
                 TextFormField(
                   obscureText: true,
                   decoration: const InputDecoration(
-                      icon: Icon(Icons.lock),
-                      labelText: 'Senha',
+                    icon: Icon(Icons.lock),
+                    labelText: 'Senha',
+                    labelStyle: TextStyle(
+                      color: Colors.black,
+                    ),
                   ),
                 ),
                 SizedBox(height: 76),
@@ -67,7 +74,8 @@ class _RecuperarSenhaPageState extends State<RecuperarSenhaPage> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFFA7AED3),
+                    primary: Color.fromARGB(255, 45, 16, 51),
+                    minimumSize: (Size(200, 40)),
                   ),
                 ),
               ],
@@ -82,7 +90,7 @@ class _RecuperarSenhaPageState extends State<RecuperarSenhaPage> {
       context,
       MaterialPageRoute(
         builder: (context) {
-          return const EntrarPage();
+          return const EnterPage();
         },
       ),
     );
