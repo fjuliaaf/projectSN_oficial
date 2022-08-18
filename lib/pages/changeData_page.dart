@@ -64,7 +64,6 @@ class _ChangeDataPage extends State<ChangeDataPage>{
                               if (value == null || value.isEmpty) {
                                 return 'Campo nome obrigatório';
                               }
-
                               return null;
                             },
                             decoration: const InputDecoration(
@@ -121,15 +120,16 @@ class _ChangeDataPage extends State<ChangeDataPage>{
                           ElevatedButton(
                             onPressed: onPressedButton,
                             child: const Text(
-                              'Salvar alterações',
+                              'SALVAR ALTERAÇÕES',
                               style: TextStyle(
                                 fontSize: 28,
                                 color: Colors.white,
-                                fontFamily: 'AmatisSC-Regular',
+                                fontFamily: 'AmaticSC-Regular',
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
                               primary: Color.fromARGB(255, 45, 16, 51),
+                              minimumSize: (Size(200, 40)),
                             ),
                           ),
                         ],

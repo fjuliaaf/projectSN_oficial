@@ -11,16 +11,15 @@ class BD {
       user: 'fjuliaaf',
       birthdate: '21/04/2005',
     ),
-    People(
-      image:
-      'https://static.thenounproject.com/png/448730-200.png',
-      name: 'William Levy',
-      email: 'williamlevy@hotmail.com',
-      
-      password: '54321',
-      user: 'willie',
-      birthdate: '29/08/1982',
-    ),
+    // People(
+    //   image:
+    //   'https://static.thenounproject.com/png/448730-200.png',
+    //   name: 'William Levy',
+    //   email: 'williamlevy@hotmail.com',
+    //   password: '54321',
+    //   user: 'willie',
+    //   birthdate: '29/08/1982',
+    // ),
     // People(
     //   image:
     //   'https://static.thenounproject.com/png/448730-200.png',

@@ -47,7 +47,6 @@ class _EnterPageState extends State<EnterPage> {
                         if (value == null || value.isEmpty) {
                           return 'Campo usuário obrigatório';
                         }
-
                         return null;
                       },
                       decoration: const InputDecoration(
@@ -74,24 +73,6 @@ class _EnterPageState extends State<EnterPage> {
                         } 
                         return null;
                       },
-                    ),
-                    const SizedBox(height: 36),
-                    TextButton(
-                      onPressed:(){
-                        Navigator.push(
-                          context, 
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return const ProfilePage();
-                            },
-                          ),
-                        );
-                      },
-                      child: Text("clique",
-                        style: TextStyle(
-                          color: Color.fromARGB(197, 33, 22, 192),
-                        ),
-                      ),
                     ),
                     const SizedBox(height: 36),
                     Row(
@@ -165,13 +146,13 @@ class _EnterPageState extends State<EnterPage> {
   void onPressedButton() {
 
     if (_formKey.currentState!.validate()) {
-      String userLogin = "jfo";
-      String passwordLogin = "12345";
+      String userBD = "fjuliaaf";
+      String passwordBD = "12345";
 
       String user = userController.text;
       String pwd = passwordController.text;
 
-      if (userLogin == user && passwordLogin == pwd) {
+      if (userBD == user && passwordBD == pwd) {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(

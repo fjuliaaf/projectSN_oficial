@@ -18,11 +18,12 @@ class _ListProfileState extends State<ListProfile> {
   Widget build(BuildContext context){
     return Column(
       children: [
-        SizedBox(width: 30),
-       Column(
+       Column( 
          crossAxisAlignment: CrossAxisAlignment.start,
          children: [
-           Image.network('https://static.thenounproject.com/png/448730-200.png'),
+           Center(
+             child: Image.network('https://static.thenounproject.com/png/448730-200.png')
+           ),
            SizedBox(height: 30),
            Text(
              "Nome: ",
@@ -84,7 +85,7 @@ class _ListProfileState extends State<ListProfile> {
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
-                fontFamily: 'Abel-Regular'
+                fontFamily: 'Abel-Regular',
               ),
             ),
             Text(
@@ -96,19 +97,22 @@ class _ListProfileState extends State<ListProfile> {
               ),
             ),
             const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: onPressedButton,
-                child: const Text(
-                  'ALTERAR DADOS CADASTRAIS',
-                  style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.white,
-                    fontFamily: 'AmaticSC-Regular',
+            Center(
+              child: 
+              ElevatedButton(
+                onPressed: onPressedButton,
+                  child: const Text(
+                    'ALTERAR DADOS CADASTRAIS',
+                    style: TextStyle(
+                      fontSize: 28,
+                      color: Colors.white,
+                      fontFamily: 'AmaticSC-Regular',
+                    ),
                   ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 45, 16, 51),
-                ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 45, 16, 51),
+                  ),
+              ),
             ),
           ]
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teste/domain/people.dart';
 import 'package:teste/pages/listPeople_page.dart';
+import 'package:teste/pages/profile_page.dart';
 
 class ListFolks extends StatefulWidget {
   final People people;
@@ -25,14 +26,25 @@ class _ListFolksState extends State<ListFolks> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  widget.people.name,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Colors.black,
+                TextButton(
+                  onPressed:(){
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const ProfilePage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(widget.people.name,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24,
+                      color: Colors.black,
                       fontFamily: 'Abel-Regular'
                     ),
+                  ),
                 ),
                 Text(
                   widget.people.email,
